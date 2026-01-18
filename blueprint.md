@@ -1,43 +1,38 @@
-# Blueprint for AI Tools Suite
+# Blueprint for Mongle Studio Landing Page
 
 ## Project Overview
-This project aims to create a modern web application, a "suite of free, powerful AI tools," providing an intuitive and visually appealing platform for users to bring their creative ideas to life. The application will be built using Next.js for a robust and scalable frontend, styled with Bootstrap for a clean and responsive design, and incorporate Firebase for potential backend services and deployment. The initial focus is on creating a compelling landing page that introduces the suite of tools, with content presented in Korean as requested.
+Mongle Studio는 AI 기반 크리에이티브 제작 스튜디오를 소개하는 단일 페이지 랜딩입니다. 프레임워크 없이 HTML/CSS/JavaScript로 구성된 정적 사이트이며, 동일한 마크업을 `index.html`과 `public/index.html`에 유지합니다.
 
 ## Current Features
-- **Firebase MCP Configuration:** The project environment is already configured with Firebase Managed Cloud Platform (MCP) server settings.
+- **Hero 소개 영역:** 스튜디오 포지셔닝, 핵심 제작 파이프라인 설명, CTA 버튼 제공.
+- **서비스 섹션:** 뮤직비디오/상세페이지/PDF 분리 세 가지 서비스 카드 구성.
+- **프로세스 섹션:** 3단계 협업 프로세스 안내.
+- **CTA + Footer:** 문의 유도 및 기본 연락처 정보 제공.
+- **테마 토글:** 라이트/다크 모드 전환 버튼과 CSS 변수 기반 테마.
+- **카피 강조:** Gamini API Key로 누구나 AI를 쉽게 사용할 수 있다는 메시지를 포함.
 
 ## Future Features / To-Do
-- **Next.js Application Initialization:** Set up a new Next.js project.
-- **Bootstrap Integration:** Integrate Bootstrap for styling and responsive design.
-- **Landing Page Development:** Create a visually appealing landing page that:
-    - Displays the translated mission statement in Korean: "창의적인 아이디어를 현실로 만들어 줄 무료의 강력한 AI 도구 모음입니다. 개발자, 디자이너, 예술가 등 누구든지 혁신하고 창조하는 데 도움이 되는 서비스를 제공합니다."
-    - Features modern UI components.
-    - Ensures mobile responsiveness.
-- **Placeholder for AI Tools:** Include sections or placeholders for various AI tools that will be developed later.
-- **Basic Navigation:** Implement basic navigation if multiple sections are introduced on the landing page.
-- **Firebase SDK Integration:** Integrate Firebase client SDK for future features like authentication, database, etc. (to be implemented as specific needs arise).
+- **콘텐츠 확장:** 포트폴리오/케이스 스터디 섹션 추가.
+- **문의 폼:** 이메일 링크 대신 간단한 폼 제공.
+- **분석 도구:** 기본 트래픽 분석 스크립트 연동.
 
 ## Technologies Used
-- **Frontend Framework:** Next.js (React)
-- **Styling:** Bootstrap
-- **Deployment/Backend (Future):** Firebase
-- **Language:** JavaScript/TypeScript (for Next.js)
+- **Frontend:** HTML, CSS, Vanilla JavaScript
+- **Typography:** Google Fonts (IBM Plex Sans KR)
 
 ## Design Principles
-- **Modern & Intuitive UI:** Utilize modern design patterns and ensure a clean, user-friendly interface.
-- **Responsive Design:** The application will be fully responsive, adapting to various screen sizes (desktop, tablet, mobile).
-- **Visually Engaging:** Employ a vibrant color palette, appropriate typography, and subtle visual effects to create an engaging user experience.
-- **Accessibility:** Adhere to A11Y standards to ensure inclusivity for all users.
+- **현대적이면서 신뢰감 있는 톤:** 여백과 대비를 강조한 레이아웃.
+- **명확한 정보 구조:** 섹션별 카피와 CTA 중심 구성.
+- **반응형 우선:** 다양한 뷰포트에서 깨지지 않는 레이아웃.
+- **접근성 고려:** 명확한 대비와 버튼 라벨 제공.
 
 ---
 
-## Plan for Current Request: Build "AI Tools Suite" Landing Page
+## Plan for Current Request: Gamini API Key 문장 추가
 
 ### Objective
-To create the foundational structure for the "AI Tools Suite" web application, starting with a well-designed landing page.
+Hero 카피에 Gamini API Key로 누구나 AI를 쉽고 편리하게 사용할 수 있다는 문장을 추가한다.
 
 ### Steps
-1.  **Initialize Next.js Project:** Create a new Next.js application in the project root.
-2.  **Integrate Bootstrap:** Add Bootstrap to the Next.js project for styling.
-3.  **Develop Landing Page:** Create the `index.tsx` (or `index.js`) page with the translated mission statement and basic modern design.
-4.  **Verify Application:** Ensure the Next.js application builds and runs correctly.
+1. **Hero 카피 업데이트:** `index.html`의 리드 문장에 추가 문장 삽입.
+2. **퍼블릭 사본 동기화:** `public/index.html`에도 동일한 문장 반영.
