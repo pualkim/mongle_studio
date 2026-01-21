@@ -63,7 +63,6 @@
         if (!modal) {
             return;
         }
-        modal.removeAttribute("hidden");
         modal.classList.add("is-open");
         modal.setAttribute("aria-hidden", "false");
     };
@@ -74,11 +73,11 @@
         }
         modal.classList.remove("is-open");
         modal.setAttribute("aria-hidden", "true");
-        modal.setAttribute("hidden", "");
     };
 
     openers.forEach((button) => {
-        button.addEventListener("click", () => {
+        button.addEventListener("click", (event) => {
+            event.preventDefault();
             const targetId = button.dataset.modalTarget;
             const modal = document.getElementById(targetId);
             openModal(modal);
@@ -86,7 +85,8 @@
     });
 
     closeButtons.forEach((button) => {
-        button.addEventListener("click", () => {
+        button.addEventListener("click", (event) => {
+            event.preventDefault();
             const modal = button.closest(".modal");
             closeModal(modal);
         });
