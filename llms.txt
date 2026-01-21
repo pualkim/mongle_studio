@@ -1,0 +1,15 @@
+# Mongle Studio
+
+## Summary
+Mongle Studio is an AI-based creative production studio that enables end-to-end creative workflows using a user's own AI API key. The site is a single-page experience focused on services, an API guide video, and contact.
+
+## Primary URL
+https://mongle-studio.com/
+
+## Sections
+- https://mongle-studio.com/#services
+- https://mongle-studio.com/#guide
+- https://mongle-studio.com/#contact
+
+## Contact
+https://mongle-studio.com/#contact

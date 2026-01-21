@@ -7,8 +7,25 @@
     <title>Mongle Studio</title>
     <meta name="description" content="Mongle Studio는 AI 기반 크리에이티브 제작을 위한 전문 스튜디오입니다. 빠른 기획, 안정적인 제작, 세련된 결과물을 제공합니다.">
     <link rel="canonical" href="https://mongle-studio.com/">
+    <link rel="alternate" href="https://mongle-studio.com/" hreflang="ko">
+    <link rel="alternate" href="https://mongle-studio.com/" hreflang="x-default">
     <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
     <meta name="googlebot" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+    <script>
+        (function () {
+            var host = window.location.hostname;
+            var isProd = host === "mongle-studio.com" || host === "www.mongle-studio.com";
+            if (!isProd) {
+                return;
+            }
+            var targetHost = "mongle-studio.com";
+            var targetProtocol = "https:";
+            if (window.location.protocol !== targetProtocol || host !== targetHost) {
+                var newUrl = targetProtocol + "//" + targetHost + window.location.pathname + window.location.search + window.location.hash;
+                window.location.replace(newUrl);
+            }
+        })();
+    </script>
     <meta property="og:title" content="Mongle Studio">
     <meta property="og:description" content="Mongle Studio는 AI 기반 크리에이티브 제작을 위한 전문 스튜디오입니다. 빠른 기획, 안정적인 제작, 세련된 결과물을 제공합니다.">
     <meta property="og:type" content="website">
@@ -29,7 +46,8 @@
     <link rel="icon" href="favicon.svg" type="image/svg+xml">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@300;400;500;600;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@300;400;500;600;700&display=swap"></noscript>
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1861531905262734"
      crossorigin="anonymous"></script>
     <!-- Google tag (gtag.js) -->
@@ -58,7 +76,17 @@
               "name": "Mongle Studio",
               "url": "https://mongle-studio.com/",
               "logo": "https://mongle-studio.com/favicon.svg",
-              "description": "Mongle Studio는 AI 기반 크리에이티브 제작을 위한 전문 스튜디오입니다. 빠른 기획, 안정적인 제작, 세련된 결과물을 제공합니다."
+              "description": "Mongle Studio는 AI 기반 크리에이티브 제작을 위한 전문 스튜디오입니다. 빠른 기획, 안정적인 제작, 세련된 결과물을 제공합니다.",
+              "contactPoint": [
+                {
+                  "@type": "ContactPoint",
+                  "contactType": "customer support",
+                  "url": "https://mongle-studio.com/#contact",
+                  "availableLanguage": [
+                    "ko-KR"
+                  ]
+                }
+              ]
             },
             {
               "@type": "WebSite",
@@ -67,6 +95,26 @@
               "name": "Mongle Studio",
               "publisher": {
                 "@id": "https://mongle-studio.com/#organization"
+              },
+              "inLanguage": "ko-KR"
+            },
+            {
+              "@type": "WebPage",
+              "@id": "https://mongle-studio.com/#webpage",
+              "url": "https://mongle-studio.com/",
+              "name": "Mongle Studio",
+              "description": "Mongle Studio는 AI 기반 크리에이티브 제작을 위한 전문 스튜디오입니다. 빠른 기획, 안정적인 제작, 세련된 결과물을 제공합니다.",
+              "isPartOf": {
+                "@id": "https://mongle-studio.com/#website"
+              },
+              "about": {
+                "@id": "https://mongle-studio.com/#organization"
+              },
+              "primaryImageOfPage": {
+                "@type": "ImageObject",
+                "url": "https://mongle-studio.com/og-image.png",
+                "width": 1200,
+                "height": 630
               },
               "inLanguage": "ko-KR"
             }
@@ -85,7 +133,8 @@
             }
         })();
     </script>
-    <link rel="stylesheet" href="style.css">
+    <link rel="preload" href="style.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="style.css"></noscript>
 </head>
 <body>
     <div class="page">
@@ -331,6 +380,6 @@
             </div>
         </div>
     </div>
-    <script src="main.js"></script>
+    <script src="main.js" defer></script>
 </body>
 </html>
