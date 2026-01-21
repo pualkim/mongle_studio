@@ -50,3 +50,62 @@
 
     applyStoredTheme();
 })();
+
+(() => {
+    const openers = document.querySelectorAll("[data-modal-target]");
+    const closeButtons = document.querySelectorAll("[data-modal-close]");
+
+    if (!openers.length) {
+        return;
+    }
+
+    const openModal = (modal) => {
+        if (!modal) {
+            return;
+        }
+        modal.classList.add("is-open");
+        modal.setAttribute("aria-hidden", "false");
+    };
+
+    const closeModal = (modal) => {
+        if (!modal) {
+            return;
+        }
+        modal.classList.remove("is-open");
+        modal.setAttribute("aria-hidden", "true");
+    };
+
+    openers.forEach((button) => {
+        button.addEventListener("click", () => {
+            const targetId = button.dataset.modalTarget;
+            const modal = document.getElementById(targetId);
+            openModal(modal);
+        });
+    });
+
+    closeButtons.forEach((button) => {
+        button.addEventListener("click", () => {
+            const modal = button.closest(".modal");
+            closeModal(modal);
+        });
+    });
+
+    document.addEventListener("click", (event) => {
+        const target = event.target;
+        if (!(target instanceof HTMLElement)) {
+            return;
+        }
+        if (!target.classList.contains("modal")) {
+            return;
+        }
+        closeModal(target);
+    });
+
+    document.addEventListener("keydown", (event) => {
+        if (event.key !== "Escape") {
+            return;
+        }
+        const modal = document.querySelector(".modal.is-open");
+        closeModal(modal);
+    });
+})();
