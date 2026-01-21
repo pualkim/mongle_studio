@@ -394,7 +394,7 @@ main {
 
 .guide-intro h2 {
     font-family: var(--font-head);
-    font-size: clamp(2rem, 2.4vw + 1rem, 3rem);
+    font-size: clamp(1.85rem, 2.1vw + 0.9rem, 2.7rem);
     line-height: 1.2;
     margin: 0 0 1.1rem;
 }

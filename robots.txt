@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://mongle-studio.com/sitemap.xml
