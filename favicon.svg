@@ -1,0 +1,4 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-label="Mongle Studio">
+    <circle cx="256" cy="256" r="256" fill="#1a5bff"/>
+    <path fill="#ffffff" d="M140 358V154h64l52 96 52-96h64v204h-46V238l-70 118-70-118v120z"/>
+</svg>
