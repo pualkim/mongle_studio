@@ -63,6 +63,7 @@
         if (!modal) {
             return;
         }
+        modal.removeAttribute("hidden");
         modal.classList.add("is-open");
         modal.setAttribute("aria-hidden", "false");
     };
@@ -73,6 +74,7 @@
         }
         modal.classList.remove("is-open");
         modal.setAttribute("aria-hidden", "true");
+        modal.setAttribute("hidden", "");
     };
 
     openers.forEach((button) => {
